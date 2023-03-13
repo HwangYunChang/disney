@@ -1,19 +1,14 @@
 @charset "utf-8";
-
-/*모든 홈페이지의 공통 태그인 header와 footer를 제외한 나머지 태그들의 스타일을 정의해주는 문서*/
-
-main{
-   background: url(img/mainbg.jpg);
+main video{
    width: 100%;
-/*    ㄴ 전체화면 크기 다 쓸거면 px보다 %로 주자 => 스크롤이 생길 시 스크롤에 가리는 px은 화면 바깥에 생길수 있기 때문에*/
-   height: 730px;
+   height: 100vh;
+   object-fit: cover;
 }
 
 section{}
 
 #ban1{
    position: relative;
-/*    ㄴ별 모양 이미지의 위치 기준 값*/
    padding: 4rem 0;
 }
 
@@ -38,15 +33,10 @@ section{}
 .b1text h2{
    font-size: 3rem;
    display: inline-block;
-/*
-   ㄴ 내용만큼 크기 차지하는 성질 이용
-    h2의 after에게 텍스트만큼의 보더 길이를 사용할 수 있도록 하기 위함!
-*/
    margin-bottom: 20px;
 }
 
 .b1text h2::after{
-/*   h2태그의 종료태그 직전에 가상공간 생성 h2태그의 내용(text)이 끝난 다음 공간*/
    content: '';
    display: block;
    border-bottom: 20px solid rgba(151, 120, 189, 0.44);
@@ -75,8 +65,8 @@ section{}
 
 .star{
    position: absolute;
-   top: -6rem;
-   right: -2rem;
+   top: 1rem;
+   right: -4rem;
    animation: star 2s infinite;
    animation-direction: alternate;
 }
@@ -106,18 +96,15 @@ section{}
    width: 48%;
    float: left;
    position: relative;
-/*   ㄴ .b2text의 위치/크기 기준 값*/
 }
 
 #ban2 li:last-child{
    margin-left: 4%;
-/*   ㄴ 부모태그 100% - li 48%*2 = 4%*/
 }
 
 #ban2 ul li .b2bg{}
 .b2bg img{
    width: 100%;
-/*   ㄴ 부모태그가 갖고 있는 가로값을 그대로 따라다녀!*/
 }
 
 #ban2 ul li .b2text{
@@ -144,7 +131,6 @@ section{}
 .b2text img{
    width: 30px;
    margin-bottom: 2rem;
-/*   ㄴ 본인 위쪽으로 들어간 부모태그의 안쪽 여백과 동일한 수치로 맞춰준 것 !*/
    transition: 0.3s
 }
 .b2text h3{
@@ -174,7 +160,6 @@ section{}
    height: 100px;
    margin: 10rem 0 5rem;
    position: relative;
-/*   ㄴ 달리는 미키 이미지가 별똥별 이미지를 기준으로 움직을 수 있도록!*/
 }
 #ban3 img{
    width: 200px;
@@ -211,8 +196,6 @@ section{}
 
 .mlist{
    padding: 4rem 0;
-/*   overflow: hidden;*/
-/*   ㄴ li태그들의 float에 대한 초기화 값으로 사용하려고 했으나! li태그 호버시 박스 바깥으로 생성되는 그림지가 양옆으로 잘려서 다른 초기화 방법을 사용해야 함*/
 }
 
 .mlist::after{
@@ -226,15 +209,9 @@ section{}
    border: 1px solid #ccc;
    padding: 10px;
    box-sizing: border-box;
-/*
-   ㄴ 태그 박스의 기준 : 보더 포함한 박스
-   => 내가 지정한 태그의 크기 안에서 보더&패딩이 생성될 수 있도록 하는 것!
-   즉, 원래 박스 + 보더 + 패딩이 속성을 주면 , 박스 > 보더 + 패딩
-*/
 }
 .mlist li+li{
    margin-left: 30px;
-/*   ㄴ .boxalign 1200px - li 380px*3= 60px / 여백이 들어갈공간 2*/
 }
 .mlist li a{
    display : block;
@@ -255,7 +232,6 @@ section{}
 
 .mlist li a .mltext{
    position: relative;
-/*   ㄴ .mlt3(classic)태그의 위치 기준 값*/
    padding: 1rem;
 }
 .mltext .mlt1{
@@ -298,26 +274,27 @@ section{}
 }
 
 .mlist li:hover img:nth-child(1){
-/*   화면에 표시되고 있던 태그 => 사라지도록 처리 해야함*/
    display: none;
 }
 .mlist li:hover img:nth-child(2){
-/*   화면에서 보이지 않도록 처리된 태그 => 다시 화면에 표시해줘야 함*/
    display: block;
 }
 
 .more{
    text-align: center;
 }
+.more a{
+   padding: 30px;
+}
 .more button{
    font-size: 1.5rem;
    font-weight: bold;
    border: 3px solid #000;
    border-radius: 30px;
-   padding: 1.5rem 3rem;
+   padding: 1.5rem 1rem;
    letter-spacing: 1px;
    transition: 0.5s;
-    margin-bottom: 3rem;
+   margin-bottom: 3rem;
 }
 
 .more button:hover{
@@ -359,7 +336,7 @@ section{}
     position: absolute;
     background: #716cef;
    padding: 0.3rem 0.5rem;
-   right: 15px;
+   right: 5px;
    top: 30px;
    color: #fff;
    border-radius: 10px;

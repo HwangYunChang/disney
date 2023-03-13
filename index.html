@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <title>🎈디즈니 세계에 오신 것을 환영합니다🎈</title>
+   <title>Desney</title>
    <link rel="stylesheet" href="common.css">
    <link rel="stylesheet" href="style.css">
+
+   <script src="jquery-3.3.1.min.js"></script>
+   <script src="script.js"></script>
 </head>
 <body>
    
@@ -14,19 +17,9 @@
             <nav>
                <div>
                   <a href="#">Disney Company</a>
-                  <ul class="submenu">
-                     <li><a href="#">Disney</a></li>
-                     <li><a href="#">Marvel</a></li>
-                     <li><a href="#">Starwars</a></li>
-                  </ul>
                </div>
                <div>
-                  <a href="#">Animation</a>
-                  <ul class="submenu">
-                     <li><a href="#">Princess</a></li>
-                     <li><a href="#">Hero</a></li>
-                     <li><a href="#">Animal</a></li>
-                  </ul>
+                  <a href="sub.html">Animation</a>
                </div>
             </nav>
             <div id="logo">
@@ -35,25 +28,16 @@
             <nav>
                <div>
                   <a href="#">Goods</a>
-                  <ul class="submenu">
-                     <li><a href="#">Living</a></li>
-                     <li><a href="#">Camping</a></li>
-                     <li><a href="#">Accsesorry</a></li>
-                     <li><a href="#">Stuff</a></li>
-                  </ul>
                </div>
                <div>
                   <a href="#">Community</a>
-                  <ul class="submenu">
-                     <li><a href="#">Gallery</a></li>
-                     <li><a href="#">Notice</a></li>
-                     <li><a href="#">QnA</a></li>
-                  </ul>
                </div>
             </nav>
          </div>
       </header>
-      <main></main>
+      <main>
+         <video src="mv/mv1.mp4" autoplay loop muted></video>
+      </main>
       <section>
          <div id="ban1" class="boxalign">
             <img src="img/mickey.jpg" alt="" class="b1img">
@@ -153,7 +137,7 @@
                </li>
             </ul>
             <div class="more">
-               <button>View More</button>
+               <button><a href="sub.html">View More</a></button>
             </div>
          </div>
          <div id="ban5" class="boxalign">
@@ -215,7 +199,7 @@
                </li>
             </ul>
             <div class="more">
-               <button>View More</button>
+               <button><a href="sub.html">View More</a></button>
             </div>
          </div>
       </section>
