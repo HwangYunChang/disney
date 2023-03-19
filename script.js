@@ -12,4 +12,13 @@ $(document).ready(function(){
         function getCurrentScroll() {
             return window.pageYOffset || document.documentElement.scrollTop;
             }
+
+    //btn
+    $(".btn").click(function(){
+        $(".menu").css("display","block")
+    })
+    $(".menu .close").click(function(){
+        $(".menu").css("display","none")
+    })
+
 });

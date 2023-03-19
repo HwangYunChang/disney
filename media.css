@@ -1,0 +1,85 @@
+@media (max-width:1200px){
+    .nav{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .boxalign{
+        width: auto;
+    }
+    #logo{
+    }
+    nav{
+        display: none;
+    }
+    .nav .btn{
+        display: block;
+    }
+    .star{
+        display: none;
+    }
+    .b1img{
+        display: none;
+    }
+}
+
+@media (max-width:768px){
+    #ban2 ul{
+        display: block;
+    }
+    #ban2 ul li{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    #ban2 li:last-child{
+        margin-left: 0;
+    }
+    #ban2 ul li .b2text{
+        top: 330px;
+        overflow: hidden;
+    }
+    #ban2 li:hover .b2text{
+        top: 0px;
+    }
+    .mlist li{
+        width: 50%;
+        margin: 0 25%;
+        margin-bottom: 50px;
+    }
+    .mlist li+li{
+        margin: 0 25%;
+        margin-bottom: 50px;
+    }
+    .mlist2 li{
+        width: 45%;
+        margin-left: 2.5%;
+        margin-bottom: 50px;
+    }
+    .mlist2 li+li{
+        margin-left: 2.5%;
+    }
+    #ban2 ul li .b2text{
+        top: -100px;
+    }
+    #ban2 li:hover .b2text{
+        top: -330px;
+    }
+}
+@media (max-width:600px){
+    .b1text p{
+        font-size: 1.3rem;
+    }
+    #ban3 img{
+        width: 150px;
+        top: -60px;
+    }
+    .mltext .mlt1{
+        font-size: 1.4rem;
+    }
+    .main-bg .txt-box h2{
+        font-size: 45px;
+    }
+    .main-bg .txt-box{
+        font-size: 16px;
+    }
+}
